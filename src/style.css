@@ -1,7 +1,13 @@
 #display{
     display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
 }
 .bar{
     background-color: green;
-    border: solid black 2px;
+
+}
+#sort{
+    background-color: aquamarine;
 }

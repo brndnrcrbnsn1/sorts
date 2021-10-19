@@ -13,16 +13,17 @@ function addBars(){
 }
 
 function insertionSort(){
-    bars = document.getElementsByClassName('.bar')
-    for (let i = 1; i < bars.length; i++) {
-        let current = bars[i];
-        let j = i-1;
-        while ((j > -1) && (current.style.height < bars[j].style.height)) {
-            bars[j+1] = bars[j];
-            j--;
-            bars[j+1] = current;
+    const bars = document.getElementsByClassName('.bar')
+    for(let i=1; i < bars.length; i++){
+        let current = bars[i]
+        bars[i].style.backgroundColor="red"
+        let j = i-1
+        while(j>=0 && current.style.height < bars[j].style.height){
+            bars[j+1] = bars[j]
+            j--
         }
+        bars[j+1] = current
     }
+
 }
 barDisplay.addEventListener('click',addBars)
-document.getElementById('sort').addEventListener('click',insertionSort)

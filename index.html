@@ -8,8 +8,14 @@
     </head>
     <body>
         <div class="container">
+            Click on Display to Generate randomly sized bars
             <div id="display">
             </div>
+            <form id="makeBar" onclick="return false">
+                <label for="rangeBar">Number of Bars to Show</label>
+                <input type="range" min="1" max="50" name="rangeBar" id="rangeBar">
+                <span id="rangeOut"></span>
+            </form>
             <div id="sort">
                 <div id="selectionSort">Selection Sort</div>
                 <div id="insertionSort">Insertion Sort</div>

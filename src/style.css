@@ -1,0 +1,7 @@
+#display{
+    display: flex;
+}
+.bar{
+    background-color: green;
+    border: solid black 2px;
+}

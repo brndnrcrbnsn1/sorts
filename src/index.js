@@ -2,12 +2,13 @@
 const barDisplay = document.getElementById('display')
 function addBars(){
     barDisplay.innerHTML=""
+    output.innerHTML = rangeBar.value
     let barsToMake = +document.getElementById('rangeBar').value
     for(let i =0; i < barsToMake; i++){
         const size = Math.floor(Math.random()*100) + 1
         const ele = document.createElement('div')
         ele.classList.add('bar')
-        ele.style.width = `${80/barsToMake}vw`
+        ele.style.width = `${70/barsToMake}vw`
         ele.style.height = `${size*3}px`
         document.getElementById('display').appendChild(ele)
     }
@@ -106,7 +107,6 @@ document.getElementById('insertionSort').addEventListener('click',insertionSort)
 let rangeBar = document.getElementById('rangeBar')
 let output =document.getElementById('rangeOut')
 output.innerHTML = rangeBar.value
-rangeBar.addEventListener('input',()=>{
-    output.innerHTML = rangeBar.value
-})
+rangeBar.addEventListener('input',addBars)
+document.addEventListener('DOMContentLoaded',addBars)
 
